@@ -1,0 +1,164 @@
+{
+  "main": {
+    "id": "f23d5b95637801a3",
+    "type": "split",
+    "children": [
+      {
+        "id": "936223e232fd6325",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "920dbe1fd41cc6f0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DSA/DSA.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "fcfa51aaca623caf",
+    "type": "split",
+    "children": [
+      {
+        "id": "f8f7e75dea2a2a52",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "80dfac7a75f814ef",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "58b5eb0173f9af7e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "345541d41958622d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b5e733b29102fc81",
+    "type": "split",
+    "children": [
+      {
+        "id": "cb963c2e25b326a3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "35fefed8ddd83e61",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "DSA/DSA.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0e2a62b4ffdca349",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "DSA/DSA.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4e81ef8b12165efb",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "2148fdcdf04bf2d1",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "DSA/DSA.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "audio-recorder:Start/stop recording": false
+    }
+  },
+  "active": "920dbe1fd41cc6f0",
+  "lastOpenFiles": [
+    "Templates/Main Template.md",
+    "DSA/DSA.md",
+    "Untitled.md",
+    "Daily Notes_Rough",
+    "Templates",
+    "Templates.md",
+    "Rough.md",
+    "Data Structures.md",
+    "DSA",
+    "Untitled 1"
+  ]
+}
