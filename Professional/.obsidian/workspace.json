@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "936223e232fd6325",
+        "id": "ac99666b57760612",
         "type": "tabs",
         "children": [
           {
-            "id": "920dbe1fd41cc6f0",
+            "id": "469e7aaf7dedf544",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DSA/DSA.md",
+                "file": "Binary Search.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "3 pass",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "b5e733b29102fc81",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DSA/DSA.md",
+                "file": "Binary Search.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DSA/DSA.md",
+                "file": "Binary Search.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DSA/DSA.md"
+                "file": "Binary Search.md"
               }
             }
           }
@@ -148,16 +149,46 @@
       "audio-recorder:Start/stop recording": false
     }
   },
-  "active": "920dbe1fd41cc6f0",
+  "active": "469e7aaf7dedf544",
   "lastOpenFiles": [
-    "Templates/Main Template.md",
-    "DSA/DSA.md",
-    "Untitled.md",
+    "Pasted image 20241004140716.png",
+    "Linked List.md",
+    "Binary Search.md",
+    "Pasted image 20241004002850.png",
+    "DSA/00_DSA.md",
+    "Pointer.md",
+    "Merge Sort.md",
+    "DSA/Time Complexity.md",
+    "Pasted image 20241002092001.png",
+    "Pasted image 20241001012602.png",
+    "Pasted image 20240930171231.png",
+    "DSA/Graphs/DFS.md",
+    "DSA/General C++.md",
+    "Doubley Linked List.md",
+    "DSA/Coding Concepts.md",
+    "DSA/Graphs/Bipartite Graphs.md",
+    "DSA/Graphs/Area and Perimeter of Connected Components.md",
+    "DSA/Graphs/Graph Shortest Path Dijkstra.md",
+    "DSA/Graphs/Monster Matrix Problem.md",
+    "DSA/Graphs/DFS Cycle.md",
+    "DSA/Graphs/BFS.md",
+    "DSA/STL/Queue.md",
+    "DSA/STL/2D Array.md",
+    "DSA/Graphs/Vertical Falling grid Graph Problem.md",
+    "DSA/Graphs/Topological ordering.md",
+    "DSA/Graphs/Graph Terminologies.md",
+    "DSA/STL/Strings.md",
+    "DSA/Math",
+    "DSA/Graphs",
+    "DSA/Math/DeMorgan Law.md",
+    "DeMorgan's Law.md",
+    "DSA/Math/HCF LCM GCD.md",
+    "Images",
+    "Images/Pasted image 20240921144203.png",
+    "Images/Pasted image 20240921144142.png",
+    "DSA/STL",
     "Daily Notes_Rough",
     "Templates",
-    "Templates.md",
-    "Rough.md",
-    "Data Structures.md",
     "DSA",
     "Untitled 1"
   ]
