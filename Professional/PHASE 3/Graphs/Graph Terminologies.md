@@ -1,4 +1,4 @@
-
+[[00_DSA]]
 #weighted, #directed, #undirected, #degree, #path, #cycle, #isolated, #DAG, #connected, #edges, #simple_graph, #sub_graph, #bipartite , #complete_graph, #adjcency 
 
 ### 1. **Graph**:

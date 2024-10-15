@@ -228,3 +228,214 @@ long long minTimeToProduce(vector<int>& machines, int t) {
     return result;
 }f
 ```
+---
+### Type 3
+### Problem Statement: #K_points_insert_BS
+
+You are given `N` points on a number line, and you need to insert `K` additional points such that the maximum distance between any two consecutive points is minimized. Your task is to determine the minimum possible value of this maximum distance.
+
+### Input:
+
+- An integer `N` representing the number of initial points.
+- An integer `K` representing the number of additional points to be inserted.
+- A list of `N` integers representing the positions of the existing points on the number line.
+
+### Output:
+
+- Print a single integer representing the minimum possible maximum distance between any two consecutive points after inserting `K` additional points.
+
+### Constraints:
+
+- `1 ≤ N ≤ 10^5`
+- `1 ≤ K ≤ 10^9`
+- The values of the points on the number line are integers.
+```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+// Function to check if it's possible to insert K points
+bool canInsertKPoints(vector<int>& points, int N, int K, int maxDist) {
+    int count = 0;
+    for (int i = 1; i < N; i++) {
+        int dist = points[i] - points[i - 1];
+        count += (dist - 1) / maxDist; // Calculate how many points we need to insert
+        if (count > K) {
+            return false; // Can't insert all K points with this maxDist
+        }
+    }
+    return true;
+}
+
+// Binary search to find the minimum maximum distance
+int minimizeMaxDistance(vector<int>& points, int N, int K) {
+    sort(points.begin(), points.end()); // Ensure points are sorted
+    int left = 1, right = points[N - 1] - points[0];
+    int answer = -1; //could be anything
+
+    while (left <= right) {
+        int mid = left + (left - right) / 2;
+        if (canInsertKPoints(points, N, K, mid)) {
+            answer = mid;  // Update answer and try smaller maxDist
+            right = mid - 1;
+        } else {
+            left = mid + 1;  // Try larger maxDist
+        }
+    }
+    return answer;
+}
+
+int main() {
+    int N = 5, K = 2;
+    vector<int> points = {1, 2, 8, 12, 15}; // Example points
+    cout << "Minimum maximum distance: " << minimizeMaxDistance(points, N, K) << endl;
+    return 0;
+}
+
+```
+---
+
+# Kth Sum Value #kth_Sum
+
+![[Pasted image 20241004193646.png]]
+>[!Note] iterate on the smaller array and do BS on larger array
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+typedef pair<int, int> Pair;
+typedef long long ll;
+vector<int> a, b;
+#define int long long
+signed main()
+{
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        int n, m, k;
+        cin >> n >> m >> k;
+        a.resize(n);
+        b.resize(m);
+        for (int i = 0; i < n; i++)
+        {
+
+            cin >> a[i];
+        }
+        for (int i = 0; i < m; i++)
+        {
+
+            cin >> b[i];
+        }
+        if (n > m)
+        {
+            swap(n, m);
+            swap(a, b);
+        }
+        sort(a.begin(), a.end());
+        sort(b.begin(), b.end());
+        int l = a[0] + b[0];
+        int h = a[n - 1] + b[m - 1];
+        int ans = l;
+        while (l <= h)
+        {
+            int mid = (l + h) / 2;
+            int ne = 0;
+            for (int i = 0; i < n; i++)
+            {
+                ne += upper_bound(b.begin(), b.end(), mid - a[i]) - b.begin();
+            }
+            if (ne >= k)
+            {
+                ans = mid;
+                h = mid - 1;
+            }
+            else
+                l = mid + 1;
+        }
+        cout << ans << '\n';
+    }
+    return 0;
+}
+```
+>[!warning]
+>Remember that you must iterate in the check function over the smaller array otherwise you will get TLE. So try to find the array which is smaller and do the iteration over it and apply the upper bound over the larger function.
+
+---
+### #Longest_Continuous_SubSegment 
+##### Description 
+
+Given a binary array of length **N**. The score of an array is the length of the longest continuous subsegment consisting of only one.
+
+Find the maximum score possible if you can change at most **K** elements of the array.
+
+##### Input Format
+
+The first line contains an integer **T**, the number of test cases.  
+The first line of each test case contains two space-separated integer **N, K** where   
+The next line contains **N** space-separated integers which are either 0 or 1.
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int arr[1000000];
+int n,k;
+bool check(int x)
+{
+   int cnt = 0,i;
+   for(i=0;i<x;i++)
+   {
+       if(arr[i]==0)
+           cnt++;
+   }
+   if(cnt<=k)
+       return true;
+   for(i=x;i<n;i++)
+   {
+       if(arr[i-x]==0)
+           cnt--;
+       if(arr[i]==0)
+           cnt++;
+       if(cnt<=k)
+           return true;
+   }
+   return false;
+}
+int main()
+{
+   ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);
+   int testcases;
+   cin>>testcases;
+   while(testcases--){
+       int i;
+       cin>>n>>k;
+       for(i=0;i<n;i++)
+           cin>>arr[i];
+       int low = k;
+       int high = n;
+       int ans = low;
+       while(low<=high)
+       {
+           int mid=(low+high)/2;
+           if(check(mid))
+           {
+               ans = mid;
+               low=mid+1;
+           }
+           else
+               high = mid-1;
+       }
+       cout<<ans<<"\n";
+   }
+}```
+>[!Notice]
+>Here the monotonic space is 1111100000 not the general case, here we are finding the maximum instead of the minimum
+
+
+## Kth element problems
+![[Pasted image 20241005212227.png]]
+

@@ -214,4 +214,144 @@ int main(){
     return 0;
 }```
 
+---
+##### Description
+
+Given an array _A_ of _N_ positive integers, find the maximum of bitwise ANDs of all subsequences of _A_ with length equal to _X_.
+
+##### Input Format
+
+The first line of the input contains a single integer _T_ denoting the number of test cases, _(1<=T<=100)_.
+
+The first line of each test case contains two space-separated integer _N_, _X_, _(2<=N<=100000), (1<=X<=N)_.
+
+The second line contains _N_ space-separated integers A1,A2,…,AN, _(1<=Ai<=10^9)_
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+signed main()
+{
+   ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);
+
+   int testCase;
+   cin>>testCase;
+   while(testCase--){
+       int n,x;
+       cin>>n>>x;
+       vector < int > arr(n);
+       for(int i=0;i<n;i++)
+           cin>>arr[i];
+       int ans = 0;
+       for(int i=29;i>=0;i--){
+           vector < int > elementBitSet;
+           for(auto v:arr){
+               if(v&(1LL<<i))
+                   elementBitSet.push_back(v);
+           }
+           if(elementBitSet.size()>=x){
+               ans+=(1LL<<i);      //if all elements have that bit as 1 then direclty add 1 to it
+               arr = elementBitSet; //check that same array again
+           }
+       }
+       cout<<ans<<"\n";
+   }
+
+}```
+#### Hint 2
+
+Take all the numbers with highestBit set if the count is >=X. Add 1<<(highestBit) in your answer. Now your problem reduces to the array of elements with highestBit set and highestBit-1 be the next bit to be considered. If the subsequence of length X is not present then calculate the answer for the same array with highestBit-1 as the new highestBit possible.
+
+
+
+##### Example #unsolved 
+##### Description
+
+A game has _n_ levels, connected by _m_ teleporters, and your task is to get from level 1 to level _n_. The game has been designed so that there are no directed cycles in the underlying graph. In how many ways can you complete the game?
+
+##### Input Format
+
+The first input line has two integers _n_ and _m_: the number of levels and teleporters. The levels are numbered 1, 2, …, _n_.  
+After this, there are _m_ lines describing the teleporters. Each line has two integers _a_ and _b_: there is a teleporter from level _a_ to level _b_.
+
+##### Output Format
+
+Print one integer: the number of ways you can complete the game. Since the result may be large, print it modulo 109+7.
+
+##### Constraints
+
+1 ≤ _n_ ≤ 105  
+1 ≤ _m_ ≤ 2 x 105  
+1 ≤ _a_, _b_ ≤ _n_
+
+##### Sample Input 1
+
+4 5 
+1 2
+2 4 
+1 3 
+3 4 
+1 4
+
+##### Sample Output 1
+
+3
+
+
+# Solution Approach
+
+[[DP]] #DP
+One useful property of directed acyclic graphs is, as the name suggests, that no cycles exist. If we consider each node in the graph as a state, we can perform dynamic programming on the graph if we process the states in an order that guarantees for every edge u → v that u is processed before v. Fortunately, this is the exact definition of a topological sort!
+
+Let dp[v] denote the number of paths reaching v. We can see, dp[v]= sum of all dp[u], s.t. u → v edge exists.  
+With an exception of dp[1], or the starting node, having a value of 1. We process the nodes topologically so dp[u] will already have been computed before dp[v]
+```cpp
+#include <iostream>
+#include <vector>
+#include <queue>
+using namespace std;
+int n;
+vector<int> edge[100001];
+vector<int> backedge[100001];
+
+int main(){
+    ios_base::sync_with_stdio(0); cin.tie(0);
+    int m; cin >> n >> m;
+    int in_degree[n+1], dp[n+1];
+    for(int i = 0; i <= n; i++){
+        in_degree[i] = 0;
+        dp[i] = 0;
+    }
+    dp[1] = 1;
+    for(int i = 0; i < m; i++){
+        int a,b; cin >> a >> b;
+        edge[a].push_back(b);
+        backedge[b].push_back(a);
+        in_degree[b]++;
+    }
+    //uses Kahn's algorithm
+    queue<int> q;
+    for(int i = 0; i < n; i++) {
+        if(in_degree[i] == 0) {
+            q.push(i);
+        }
+    }
+
+    while(!q.empty()) {
+        int node = q.front();
+        q.pop();
+        for(int next : edge[node]) {
+            in_degree[next]--;
+            if(in_degree[next] == 0) q.push(next);
+        }
+
+        for(int prev : backedge[node]) {
+            dp[node] = (dp[node] + dp[prev]) % 1000000007;
+        }
+    }
+    cout << dp[n] << endl;
+    return 0;
+}```
+
 ```

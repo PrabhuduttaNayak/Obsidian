@@ -47,4 +47,11 @@ const int dy[] = {-1, -2, -2, -1, 1, 2, 2, 1};
 ```
 
 
-### Examples
+### The difference between `std::endl` and `\n` in C++ lies in how they handle output: #endl #/n
+
+- **`endl`**: Inserts a newline character **and** flushes the output buffer, which ensures all output is immediately sent to the destination (console, file, etc.). This can cause slight performance overhead due to the flushing process.
+    
+- **`\n`**: Only inserts a newline character without flushing the buffer. It's faster since the output buffer is only flushed periodically or when needed.
+    
+
+In most cases, use `\n` for better performance unless immediate flushing is necessary.

@@ -9,6 +9,8 @@ Status:
 #### Odd One Out AZ101
 
 ##### Description
+XOR is like adding binary elements without keeping Carry or adding and then taking %2
+It is an odd number of 1 Detector Algorithm
 
 You are given an array of N integers. The frequency of exactly one integer is odd. Find that integer.
 
@@ -22,6 +24,8 @@ You are given an array of N integers. The frequency of exactly one integer is od
         cout << ans << "\n";
 ```
 
+>[!Warning]
+>a^(b+c)!=a^b+a^c;
 
 
 ### Examples

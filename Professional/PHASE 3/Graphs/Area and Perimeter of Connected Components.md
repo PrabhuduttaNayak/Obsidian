@@ -119,3 +119,173 @@ int main() {
 
 
 ### Examples
+
+#Multisource_BFS 
+##### Description
+
+Your city is having people infected with a virus. The city in which you live is represented as a grid consisting of **n** rows and **m** columns. Cells containing **2** are the cells where the people infected with the virus are present and the cells having **1** are the cells having people not yet infected with the virus. There are certain empty cells which are represented by **0**. The infected people in a unit time can infect **all** their adjacent cells, i.e, if they are present at cell [i, j] they can infect cells [i-1, j], [i+1, j], [i, j-1] and [i, j+1]. The virus **cannot** pass through empty cells. Your task is to print the minimum time in which all the people are infected with the virus. If the virus cannot infect everyone, print **-1**.
+
+##### Input Format
+
+The first line contains two integers **n** and **m**  — the number of rows and columns, respectively.  
+The following **n** lines contain **m** integers each, the j-th element in the i-th line is the number written in the j-th cell of the i-th row.
+
+##### Output Format
+
+Print the minimum time in which everyone can be infected or **-1** if everyone cannot be infected.
+
+##### Constraints
+
+```
+1 <= n <= 1000
+1 <= m <= 1000
+```
+
+Copy
+
+##### Sample Input 1
+
+3 3 
+0 1 2 
+0 1 2 
+1 1 2
+
+##### Sample Output 1
+
+2
+
+##### Sample Input 2
+
+3 3 
+0 1 2 
+0 1 2 
+1 0 2
+
+##### Sample Output 2
+
+-1
+
+```cpp
+#include <bits/stdc++.h>
+
+  
+
+using namespace std;
+
+  
+
+#define int long long
+
+#define double long double
+
+  
+  
+
+int dx[]={0,0,1,-1};
+
+int dy[]={1,-1,0,0};
+
+  
+
+signed main(){
+
+ios_base::sync_with_stdio(false);
+
+cin.tie(0); cout.tie(0);
+
+  
+
+    int n, m;
+
+    cin >> n >> m;
+
+    vector <vector <int>>grid(n, vector <int> (m));
+
+    for (int i = 0; i < n; i++) {
+
+        for (int j = 0; j < m; j++) {
+
+            cin >> grid[i][j];
+
+        }
+
+    }
+
+    vector <vector <int>> vis(n, vector <int> (m, 1e9));
+
+    queue <pair<int, int>> q;
+
+    for (int i = 0; i < n; i++) {
+
+        for (int j = 0; j < m; j++) {
+
+            if (grid[i][j] == 2) {
+
+                vis[i][j] = 0;
+
+                q.push({i, j});
+
+            }
+
+        }
+
+    }
+
+    while(!q.empty()){
+
+        auto cur = q.front();
+
+        q.pop();
+
+        int x,y;
+
+        for(int i = 0; i <4;i++){
+
+            x=cur.first+dx[i];
+
+            y=cur.second+dy[i];
+
+            if(x>=0 && x<n && y>=0 && y<m && grid[x][y]!=0 && vis[x][y]==1e9){
+
+                vis[x][y]=vis[cur.first][cur.second]+1;
+
+                q.push({x,y});
+
+            }
+
+        }
+
+    }
+
+  
+
+    int ans = 0;
+
+    for (int i = 0; i < n; i++) {
+
+        for (int j = 0; j < m; j++) {
+
+            if (grid[i][j] != 0) {
+
+                ans = max(ans, vis[i][j]);
+
+            }
+
+        }
+
+    }
+
+    if (ans == 1e9)
+
+        ans = -1;
+
+    cout << ans;
+
+  
+  
+  
+
+    return 0;
+
+}
+```

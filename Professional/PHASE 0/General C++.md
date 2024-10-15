@@ -135,3 +135,18 @@ vector<int> findDivisors(int n) {
     return divisors;
 }
 ```
+---
+1. **`*max_element`**: #max_element_STL #STL 
+    
+    - This function is part of the `<algorithm>` library.
+    - It returns an iterator to the maximum element in a given range.
+    - Syntax: `*max_element(start_iterator, end_iterator)`
+    - Example: `int max_val = *max_element(v.begin(), v.end());`
+        - It finds the maximum value in the vector `v`.
+2. **`accumulate`**: #array_sum_STL #STL #accumulate_sum
+    
+    - This function is part of the `<numeric>` library.
+    - It calculates the sum of elements in a range.
+    - Syntax: `accumulate(start_iterator, end_iterator, initial_value)`
+    - Example: `int sum = accumulate(v.begin(), v.end(), 0);`
+        - It computes the sum of elements in vector `v`.

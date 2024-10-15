@@ -1,19 +1,19 @@
 {
   "main": {
-    "id": "f23d5b95637801a3",
+    "id": "bf5b77bfb7c688b9",
     "type": "split",
     "children": [
       {
-        "id": "ac99666b57760612",
+        "id": "36905c1e9eb1c814",
         "type": "tabs",
         "children": [
           {
-            "id": "469e7aaf7dedf544",
+            "id": "a010ebd2be2441db",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PHASE 3/Graphs/Area and Perimeter of Connected Components.md",
+                "file": "Professional/Bitwise operations.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "fcfa51aaca623caf",
+    "id": "139d785a4b0d218d",
     "type": "split",
     "children": [
       {
-        "id": "f8f7e75dea2a2a52",
+        "id": "53c9ef68d71047c8",
         "type": "tabs",
         "children": [
           {
-            "id": "80dfac7a75f814ef",
+            "id": "e25713457769b0a8",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,12 +43,12 @@
             }
           },
           {
-            "id": "58b5eb0173f9af7e",
+            "id": "b92e5311d0e06800",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "floyd",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -58,7 +58,7 @@
             }
           },
           {
-            "id": "345541d41958622d",
+            "id": "f6f75acb83fd8ece",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -69,23 +69,24 @@
       }
     ],
     "direction": "horizontal",
-    "width": 269.5
+    "width": 300,
+    "collapsed": true
   },
   "right": {
-    "id": "b5e733b29102fc81",
+    "id": "dd9d7173d9cbc566",
     "type": "split",
     "children": [
       {
-        "id": "cb963c2e25b326a3",
+        "id": "cf468b5455731478",
         "type": "tabs",
         "children": [
           {
-            "id": "35fefed8ddd83e61",
+            "id": "8cab24c3b1233677",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PHASE 3/Graphs/Area and Perimeter of Connected Components.md",
+                "file": "Professional/Bitwise operations.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,19 +98,19 @@
             }
           },
           {
-            "id": "0e2a62b4ffdca349",
+            "id": "887f7c044dbc32c8",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PHASE 3/Graphs/Area and Perimeter of Connected Components.md",
+                "file": "Professional/Bitwise operations.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "4e81ef8b12165efb",
+            "id": "9e6507b261d3038c",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -120,17 +121,16 @@
             }
           },
           {
-            "id": "2148fdcdf04bf2d1",
+            "id": "9d23b382551cb69c",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "PHASE 3/Graphs/Area and Perimeter of Connected Components.md"
+                "file": "Professional/Bitwise operations.md"
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -144,57 +144,31 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "audio-recorder:Start/stop recording": false
+      "command-palette:Open command palette": false
     }
   },
-  "active": "469e7aaf7dedf544",
+  "active": "a010ebd2be2441db",
   "lastOpenFiles": [
-    "PHASE 3/Graphs/BFS.md",
-    "PHASE 3/Graphs/Area and Perimeter of Connected Components.md",
-    "PHASE 3/Graphs/Monster Matrix Problem.md",
-    "DSA/00_DSA.md",
-    "PHASE 3/Graphs/Floyd Warshal.md",
-    "PHASE 3/Graphs/Bellman Ford.md",
-    "PHASE 3/Graphs/Topological ordering.md",
-    "Images/Pasted image 20241005212227.png",
-    "Images/Pasted image 20241004193646.png",
-    "PHASE 3/Graphs/DFS Cycle.md",
-    "PHASE 3/Graphs/DFS.md",
-    "PHASE 3/Graphs/Graph Terminologies.md",
-    "PHASE 2/Recursion.md",
-    "DSA/Merge Sort.md",
-    "Images/Pasted image 20241014002432.png",
-    "Images/Pasted image 20241014002344.png",
-    "Images/Pasted image 20241014002141.png",
-    "DSA/Math/HCF LCM GCD.md",
-    "PHASE 3/Graphs/Graph Shortest Path Dijkstra.md",
-    "PHASE 2/Bitwise operations.md",
-    "Images/Pasted image 20241013095355.png",
-    "Images/Pasted image 20241012234946.png",
-    "DSA/Math/XOR.md",
-    "PHASE 2/Binary Search REAL domain.md",
-    "PHASE 0/Time Complexity.md",
-    "DSA/Coding Concepts.md",
-    "PHASE 3/DP.md",
-    "PHASE 3/Trees.md",
-    "PHASE 3",
-    "PHASE 2/Backtracking.md",
-    "PHASE 2",
-    "PHASE 1/Stack.md",
-    "PHASE 1/Multiset.md",
-    "PHASE 1/Set.md",
-    "PHASE 1/Priority Queue.md",
-    "PHASE 1",
-    "PHASE 0",
-    "Images/Pasted image 20241004140716.png",
-    "Images/Pasted image 20241004002850.png",
-    "Images/Pasted image 20241002092001.png",
-    "DSA/Math",
-    "PHASE 3/Graphs",
-    "Images",
-    "PHASE 0/STL",
-    "Daily Notes_Rough",
-    "Templates"
+    "Professional/Sliding Window.md",
+    "Untitled.canvas",
+    "Professional/Bitwise operations.md",
+    "Professional/DSA/00_DSA.md",
+    "Professional/DSA/General C++.md",
+    "Professional/Contribution Technique.md",
+    "Professional/Common Strategies.md",
+    "Professional/DSA/Graphs/Graph Terminologies.md",
+    "2024-10-06.md",
+    "Personal/Welcome.md",
+    "Untitled.md",
+    "Untitled",
+    "Professional/Linked List.md",
+    "Professional/Doubley Linked List.md",
+    "Professional/DSA/Graphs/Graph Shortest Path Dijkstra.md",
+    "Professional/DSA/Time Complexity.md",
+    "Professional/Ternary Search.md",
+    "Professional/Pasted image 20241006100524.png",
+    "Professional/Templates/Main Template.md",
+    "Professional/Binary Search.md",
+    "Professional/Pasted image 20241005212227.png"
   ]
 }

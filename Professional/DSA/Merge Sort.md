@@ -1,5 +1,5 @@
 ![[Pasted image 20241002092001.png]]
-[[00_DSA]] [[Time Complexity]] 
+[[00_DSA]] [[Time Complexity]]  [[Recursion]]
 #merge_sort
 ## Complexity
 |  | Best | Worst |

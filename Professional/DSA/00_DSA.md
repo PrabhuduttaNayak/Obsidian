@@ -4,47 +4,66 @@ Tags:
 
 Status:
 
-# Contents
-* [[Coding Concepts]]
-* [[Time Complexity]]
-* [[Common Strategies]]
+# PHASE 0
+
 * [[General C++]]
- 
-### Data Structures
+* [[Time Complexity]]
 * [[Array]]
 * [[2D Array]]
-* [[Structures]]
 * [[Strings]]
-* [[Hash Table]]
-* [[Tree Map]]
-* [[Pointer]]
-* [[Queue]]
+* [[Structures]]
+* [[Linked List]]
+* [[Doubley Linked List]]
+
+# PHASE 1
+
+* nCr [[General C++#nCr Calculation with Modular Inverse]]
 * [[Stack]]
-* [[LRU Cache]]
-* [[Binary Search Tree]]
-* [[Binary Heap]]
-* [[Trie]]
-* [[DFS]]
-* [[BFS]]
+* [[Queue]]
+* [[Map]]
+* [[Priority Queue]]
+* [[Set]]
+* [[Multiset]]
+* 
+# PHASE 2
+
 * [[Binary Search]]
+* [[Binary Search REAL domain]]
+* [[Ternary Search]]
+* [[Bitwise operations]]
+* [[Sliding Window]]
+* [[Pointer]]
+* [[Contribution Technique]]
+* [[Recursion]]
+* [[Backtracking]]
+
+# PHASE 3
+
+
+* [[Graph Terminologies]]
+* [[DFS]]
+* [[BFS]] 
+* [[Graph Shortest Path Dijkstra]]
+* [[Bipartite Graphs]]
+* [[Topological ordering]]
+* [[Area and Perimeter of Connected Components]]
+* [[DFS Cycle]]
+* [[Monster Matrix Problem]]
+* [[Bellman Ford]]
+* [[Floyd Warshal]]
+* [[Trees]]
+* [[DP]]
 * 
 
-### Compsci
-* [[Bitwise operations]]
-* [[Character Sets]]
-* [[Powers of 2]]
-* [[Regex]]
-* [[Hash Functions]]
+# Contents
+* [[Coding Concepts]]
 
-### Math
+
+
+# Math
 * [[DeMorgan Law]]
-* nCr [[General C++#nCr Calculation with Modular Inverse]]
 * [[XOR]]
 * [[HCF LCM GCD]]
-### Behavioural
-* [[Behavioural Interview Notes]]
-
-
 
 
 ### References
