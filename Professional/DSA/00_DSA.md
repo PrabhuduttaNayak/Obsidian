@@ -52,6 +52,7 @@ Status:
 * [[Bellman Ford]]
 * [[Floyd Warshal]]
 * [[Trees]]
+* [[Union Find DSU]]
 * [[DP]]
 * 
 
@@ -64,6 +65,11 @@ Status:
 * [[DeMorgan Law]]
 * [[XOR]]
 * [[HCF LCM GCD]]
+* [[Sieve of Eratosthenes]]
+* [[Fast Factorization]]
+* [[Prime]]
+* [[Totient]]
+* [[Miscellaneous]]
 
 
 ### References

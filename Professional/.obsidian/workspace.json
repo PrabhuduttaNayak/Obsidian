@@ -11,12 +11,12 @@
             "id": "469e7aaf7dedf544",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "PHASE 3/Graphs/Area and Perimeter of Connected Components.md",
-                "mode": "source",
-                "source": false
-              }
+                "file": "Pasted image 20241019182724.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20241019182724"
             }
           }
         ]
@@ -39,7 +39,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -48,13 +50,15 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "floyd",
+                "query": "tag:#fermat_Theorm",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -62,7 +66,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -85,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "PHASE 3/Graphs/Area and Perimeter of Connected Components.md",
+                "file": "MST.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -93,7 +99,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for MST"
             }
           },
           {
@@ -102,10 +110,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "PHASE 3/Graphs/Area and Perimeter of Connected Components.md",
+                "file": "MST.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from MST"
             }
           },
           {
@@ -116,7 +126,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -125,8 +137,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "PHASE 3/Graphs/Area and Perimeter of Connected Components.md"
-              }
+                "file": "MST.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of MST"
             }
           }
         ],
@@ -150,46 +164,45 @@
   },
   "active": "469e7aaf7dedf544",
   "lastOpenFiles": [
-    "PHASE 3/Graphs/BFS.md",
-    "PHASE 3/Graphs/Area and Perimeter of Connected Components.md",
-    "PHASE 3/Graphs/Monster Matrix Problem.md",
+    "PHASE 3/Graphs/Topological ordering.md",
     "DSA/00_DSA.md",
+    "PHASE 3/Graphs/DFS Cycle.md",
+    "Miscellaneous.md",
+    "Pasted image 20241022194402.png",
+    "Totient.md",
+    "Pasted image 20241022115858.png",
+    "Prime.md",
+    "MST.md",
+    "Pasted image 20241022001236.png",
+    "Pasted image 20241022001210.png",
+    "Pasted image 20241022001047.png",
+    "Pasted image 20241022001009.png",
+    "Fast Factorization.md",
+    "Union Find DSU.md",
+    "PHASE 3/Trees.md",
+    "PHASE 0/General C++.md",
+    "PHASE 1/Priority Queue.md",
+    "Sieve of Eratosthenes.md",
+    "Pasted image 20241020101258.png",
+    "Pasted image 20241019182724.png",
+    "Pasted image 20241019180343.png",
+    "Pasted image 20241017120727.png",
+    "PHASE 3/Graphs/Area and Perimeter of Connected Components.md",
+    "PHASE 3/Graphs/BFS.md",
+    "PHASE 3/Graphs/Monster Matrix Problem.md",
     "PHASE 3/Graphs/Floyd Warshal.md",
     "PHASE 3/Graphs/Bellman Ford.md",
-    "PHASE 3/Graphs/Topological ordering.md",
-    "Images/Pasted image 20241005212227.png",
-    "Images/Pasted image 20241004193646.png",
-    "PHASE 3/Graphs/DFS Cycle.md",
     "PHASE 3/Graphs/DFS.md",
     "PHASE 3/Graphs/Graph Terminologies.md",
     "PHASE 2/Recursion.md",
     "DSA/Merge Sort.md",
-    "Images/Pasted image 20241014002432.png",
-    "Images/Pasted image 20241014002344.png",
-    "Images/Pasted image 20241014002141.png",
     "DSA/Math/HCF LCM GCD.md",
     "PHASE 3/Graphs/Graph Shortest Path Dijkstra.md",
     "PHASE 2/Bitwise operations.md",
-    "Images/Pasted image 20241013095355.png",
-    "Images/Pasted image 20241012234946.png",
-    "DSA/Math/XOR.md",
-    "PHASE 2/Binary Search REAL domain.md",
-    "PHASE 0/Time Complexity.md",
-    "DSA/Coding Concepts.md",
-    "PHASE 3/DP.md",
-    "PHASE 3/Trees.md",
     "PHASE 3",
-    "PHASE 2/Backtracking.md",
     "PHASE 2",
-    "PHASE 1/Stack.md",
-    "PHASE 1/Multiset.md",
-    "PHASE 1/Set.md",
-    "PHASE 1/Priority Queue.md",
     "PHASE 1",
     "PHASE 0",
-    "Images/Pasted image 20241004140716.png",
-    "Images/Pasted image 20241004002850.png",
-    "Images/Pasted image 20241002092001.png",
     "DSA/Math",
     "PHASE 3/Graphs",
     "Images",
