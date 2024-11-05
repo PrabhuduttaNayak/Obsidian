@@ -11,15 +11,32 @@
             "id": "469e7aaf7dedf544",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Pasted image 20241019182724.png"
+                "file": "Lazy Segment Trees.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20241019182724"
+              "icon": "lucide-file",
+              "title": "Lazy Segment Trees"
+            }
+          },
+          {
+            "id": "cbdc20750bb671a8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Kth Segment Trees.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Kth Segment Trees"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -50,7 +67,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#fermat_Theorm",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -71,11 +88,13 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 269.5
+    "width": 269.5,
+    "collapsed": true
   },
   "right": {
     "id": "b5e733b29102fc81",
@@ -162,43 +181,45 @@
       "audio-recorder:Start/stop recording": false
     }
   },
-  "active": "469e7aaf7dedf544",
+  "active": "cbdc20750bb671a8",
   "lastOpenFiles": [
-    "PHASE 3/Graphs/Topological ordering.md",
     "DSA/00_DSA.md",
-    "PHASE 3/Graphs/DFS Cycle.md",
-    "Miscellaneous.md",
-    "Pasted image 20241022194402.png",
-    "Totient.md",
-    "Pasted image 20241022115858.png",
-    "Prime.md",
-    "MST.md",
-    "Pasted image 20241022001236.png",
-    "Pasted image 20241022001210.png",
-    "Pasted image 20241022001047.png",
-    "Pasted image 20241022001009.png",
-    "Fast Factorization.md",
-    "Union Find DSU.md",
-    "PHASE 3/Trees.md",
-    "PHASE 0/General C++.md",
-    "PHASE 1/Priority Queue.md",
-    "Sieve of Eratosthenes.md",
-    "Pasted image 20241020101258.png",
-    "Pasted image 20241019182724.png",
-    "Pasted image 20241019180343.png",
-    "Pasted image 20241017120727.png",
-    "PHASE 3/Graphs/Area and Perimeter of Connected Components.md",
-    "PHASE 3/Graphs/BFS.md",
-    "PHASE 3/Graphs/Monster Matrix Problem.md",
-    "PHASE 3/Graphs/Floyd Warshal.md",
-    "PHASE 3/Graphs/Bellman Ford.md",
-    "PHASE 3/Graphs/DFS.md",
-    "PHASE 3/Graphs/Graph Terminologies.md",
-    "PHASE 2/Recursion.md",
-    "DSA/Merge Sort.md",
-    "DSA/Math/HCF LCM GCD.md",
+    "Kth Segment Trees.md",
+    "PHASE 4/Segment Trees.md",
+    "Fenwick Tree.md",
+    "Lazy Segment Trees.md",
+    "Pasted image 20241102192733.png",
+    "PHASE 0/Miscellaneous.md",
+    "Pasted image 20241029221023.png",
+    "Pasted image 20241028185703.png",
+    "Pasted image 20241028183328.png",
+    "Pasted image 20241028175806.png",
+    "Pasted image 20241027175320.png",
+    "Pasted image 20241027175302.png",
+    "PHASE 4",
+    "Images/Pasted image 20241027174920.png",
+    "Images/Pasted image 20241027174913.png",
+    "Images/Pasted image 20241027174854.png",
+    "PHASE 0/Time Complexity.md",
+    "PHASE 2/Pointer.md",
+    "PHASE 3/DP.md",
     "PHASE 3/Graphs/Graph Shortest Path Dijkstra.md",
-    "PHASE 2/Bitwise operations.md",
+    "PHASE 3/Graphs/BFS.md",
+    "PHASE 3/Graphs/Area and Perimeter of Connected Components.md",
+    "PHASE 3/Graphs/Monster Matrix Problem.md",
+    "PHASE 3/Graphs/Vertical Falling grid Graph Problem.md",
+    "PHASE 3/Sieve of Eratosthenes.md",
+    "PHASE 3/Fast Factorization.md",
+    "PHASE 2/Binary Search.md",
+    "PHASE 0/Doubley Linked List.md",
+    "PHASE 1/Priority Queue.md",
+    "PHASE 3/Union Find DSU.md",
+    "PHASE 3/MST.md",
+    "PHASE 3/Totient.md",
+    "PHASE 3/Graphs/Topological ordering.md",
+    "PHASE 3/Graphs/DFS Cycle.md",
+    "PHASE 0/Prime.md",
+    "PHASE 3/Trees.md",
     "PHASE 3",
     "PHASE 2",
     "PHASE 1",
@@ -207,7 +228,6 @@
     "PHASE 3/Graphs",
     "Images",
     "PHASE 0/STL",
-    "Daily Notes_Rough",
-    "Templates"
+    "Daily Notes_Rough"
   ]
 }

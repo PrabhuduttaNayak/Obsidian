@@ -85,7 +85,7 @@ for(prime:[1,sqrt(b)]){
 	while (curMul<=b){
 		isPrime[curMul]=0;
 		curMul+=prime;
-		}
+	}
 }
 ```
 

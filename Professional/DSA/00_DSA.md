@@ -56,10 +56,16 @@ Status:
 * [[DP]]
 * 
 
+
+# PHASE 4
+- [[Segment Trees]]
+- [[Lazy Segment Trees]]
+- [[Fenwick Tree]]
+- [[Kth Segment Trees]]
 # Contents
 * [[Coding Concepts]]
 
-
+ 
 
 # Math
 * [[DeMorgan Law]]

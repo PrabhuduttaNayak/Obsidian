@@ -318,3 +318,241 @@ signed main(){
 }
 }```
 
+---
+##### Description #unsolved 
+
+You are going back to KGP and want to travel from Delhi to Kolkata by plane. You would like to find answers to the following questions:
+
+1. What is the minimum price of such a route? 
+2. How many minimum-price routes are there? (modulo 10^9+7) 
+3. What is the minimum number of flights in a minimum-price route? 
+4. What is the maximum number of flights in a minimum-price route?
+
+##### Input Format
+
+The first input line contains two integers n and m: the number of cities and the number of flights. The cities are numbered 1,2,…,n. City 1 is Delhi, and city n is Kolkata.
+
+After this, there are m lines describing the flights. Each line has three integers a, b, and c: there is a flight from city a to city b with price c. All flights are one-way flights.
+
+##### Output Format
+
+Print four integers according to the problem statement in a single line. If there is no route from Delhi to Kolkata, then print −1−1.
+
+##### Constraints
+
+1≤n≤1051≤n≤105 0≤m≤2⋅1050≤m≤2⋅105 1≤a,b≤n1≤a,b≤n 1≤c≤1091≤c≤109
+
+##### Sample Input 1
+
+4 5 1 4 5 1 2 4 2 4 5 1 3 2 3 4 3
+
+##### Sample Output 1
+
+5 2 1 2
+
+##### Sample Input 2
+
+5 5 1 2 4 3 4 6 2 1 3 3 5 10 5 4 6
+
+##### Sample Output 2
+
+-1
+![[Pasted image 20241024122710.png]]
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+#define lli long long int
+#define vi vector<int>
+#define vvi vector<vector<int>>
+#define mod 1000000007
+#define endl '\n'              // \n is more fast than endl
+
+
+vector<pair<lli,lli>> adj[200002];
+lli cost[200002];
+lli ways[200002],mnf[200002],mxf[200002];
+
+void bfs(){
+    priority_queue<pair<lli,lli>> q;
+    q.push({0,1});
+    cost[1]=0;
+    ways[1]=1;
+    mnf[1]=0;
+    mxf[1]=0;
+    while(!q.empty()){
+        lli c=-q.top().first;
+        lli node=q.top().second;
+        q.pop();
+        if(c>cost[node])continue;
+        for(auto it:adj[node]){
+            lli v=it.first,w=it.second;
+            if(cost[v] > cost[node]+w){
+                cost[v]=cost[node]+w;
+                ways[v]=ways[node];
+                mnf[v]=mnf[node]+1;
+                mxf[v]=mxf[node]+1;
+                q.push({-cost[v],v});
+            }
+            else if(cost[v] == cost[node]+w){
+                ways[v]=(ways[v]+ways[node])%mod;
+                mnf[v]=min({mnf[v],mnf[node]+1});
+                mxf[v]=max({mxf[v],mxf[node]+1});
+            }
+        }
+    }
+}
+
+int main()
+{    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    // #ifndef ONLINE_JUDGE
+    // freopen("input.txt", "r", stdin);
+    // freopen("output.txt", "w", stdout);
+    // #endif
+   
+    int n,m;cin>>n>>m;
+    for(int i=0;i<=n;i++){
+        cost[i]=1e18;
+        ways[i]=0;
+        mnf[i]=0;
+        mxf[i]=0;
+    }
+    for(int i=0;i<m;i++){
+        lli x,y,w;cin>>x>>y>>w;
+        adj[x].push_back({y,w});
+    }
+
+    bfs();
+
+    if(cost[n]==1e18){
+        cout<<-1<<endl;
+        return 0;
+    }
+
+    cout<<cost[n]<<' '<<ways[n]<<' '<<mnf[n]<<' '<<mxf[n]<<endl;
+
+
+    return 0;
+}
+```
+
+---
+## One Punch Man
+##### Description
+
+There is a town divided into a grid of cells with HH rows and WW columns. The cell at the ithith row from the top and jthjth column from the left is a passable space if Si,jSi,j​ is **'.'** and a block if Si,jSi,j​ is **'#'**.
+
+Saitama will go from his house to a fish market. His house is in the cell at the top-left corner, and the fish market is in the cell at the bottom-right corner.
+
+Saitama can move one cell _up, down, left, or right_ to a passable cell. He cannot leave the town. He cannot enter a block, either. However, his physical strength allows him to destroy all blocks in a square region with 2×22×2 cells of his choice with **one punch**, making these cells passable.
+
+Find the minimum number of punches needed for Saitama to reach the fish market.
+
+##### Input Format
+
+Input is given from Standard Input in the following format: HH WW S1,1S1,1​ . . . S1,WS1,W​ : : SH,1SH,1​ . . . SH,WSH,W​
+
+##### Sample Input 1
+
+5 5 ..#.. #.#.# ##.## #.#.# ..#..
+
+##### Sample Output 1
+
+1
+
+##### Sample Input 2
+
+5 7 ....... ######. ....... .###### .......
+
+##### Sample Output 2
+
+0
+
+Solve using 01 BFS
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+#define ll int64_t
+#define endl '\n'
+
+int n, m;
+int dx[4] = {0, 0, -1, 1};
+int dy[4] = { -1, 1, 0, 0};
+void solve() {
+	cin >> n >> m;
+	char grid[n][m];
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++)cin >> grid[i][j];
+	}
+	vector<vector<int>> dist(n + 1, vector<int>(m + 1, 1e9));
+	deque<array<int, 2>> dq;
+	dq.push_front({0, 0});
+	dist[0][0] = 0;
+	while (!dq.empty()) {
+		auto v = dq.front();
+		dq.pop_front();
+		for (int i = 0; i < 4; i++) {
+			int x = dx[i] + v[0], y = dy[i] + v[1];
+			if (x >= 0 && x < n && y >= 0 && y < m) {
+				if (grid[x][y] == '.') {
+					if (dist[x][y] > dist[v[0]][v[1]]) {
+						dist[x][y] = dist[v[0]][v[1]];
+						dq.push_front({x, y});
+					}
+				}
+				else {
+					for (int p = x - 1; p <= x + 1; p++) {
+						for (int q = y - 1; q <= y + 1; q++) {
+							if (p >= 0 && p < n && q >= 0 && q < m) {
+								if (dist[p][q] > dist[v[0]][v[1]] + 1) {
+									dist[p][q] = dist[v[0]][v[1]] + 1;
+									dq.push_back({p, q});
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	cout << dist[n - 1][m - 1];
+}
+int main() {
+	ios_base :: sync_with_stdio(0);
+	cin.tie(nullptr); cout.tie(nullptr);
+
+#ifdef Mastermind_
+	freopen("input.txt", "r", stdin); \
+	freopen("output.txt", "w", stdout);
+#endif
+	int t = 1;
+	// int i = 1;
+	// cin >> t;
+	while (t--) {
+		// cout << "Case #" << i << ": ";
+		solve();
+		// i++;
+	}
+	return 0;
+}
+
+```
+
+>[!Important]
+>Rember the below code to hit 2x2 walls
+```cpp
+for (int p = x - 1; p <= x + 1; p++) {
+						for (int q = y - 1; q <= y + 1; q++) {
+							if (p >= 0 && p < n && q >= 0 && q < m) {
+								if (dist[p][q] > dist[v[0]][v[1]] + 1) {
+									dist[p][q] = dist[v[0]][v[1]] + 1;
+									dq.push_back({p, q});
+								}
+							}
+						}
+					}
+```
